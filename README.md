@@ -1,6 +1,6 @@
-El programa LUNAR esta diseñado para la clasificación binaria de cáncer mediante fotografías. Se basa en el algoritmo YOLO y la base de datos HAM10000. Se diseño para ser utilizado en un Raspeberry Pi 5 conectado a una cámara.
+El programa LUNAR esta diseñado para la clasificación binaria de cáncer mediante fotografías. Se basa en el algoritmo YOLO y la base de datos HAM10000. Se diseñó para ser utilizado en un Raspeberry Pi 5 conectado a una cámara.
 
-El presente repositorio es solo un compilado, de lo realizado en el curso "Proyecto de Biodiseño 1" en la UPCH. Se recomienda revisar los códigos antes de su implementación o uso, debido a que se han movido carpetas del repositorio local, por tanto algunos paths puede que esten rotos.
+El presente repositorio es solo un compilado de lo realizado en el curso "Proyecto de Biodiseño 1" en la UPCH. Se recomienda revisar los códigos antes de su implementación o uso, debido a que se han movido carpetas del repositorio local, por tanto algunos paths puede que esten rotos.
 
 ### Librerias clave
 - [Ambumentations](https://github.com/albumentations-team/albumentations): Permite realizar data augmentation. Compatible con los bounding boxes de YOLO
@@ -16,9 +16,13 @@ Programa final lanzado en el Raspberry Pi 5. El código ha sido modicado para po
 
 Toma la información de `dataset/HAM10000.xlsx` para generar de manera aleatoria los 3 grupos de entrenamiento: `train` - `val` - `externalval`, tanto de las imágenes como los labels.
 
+Se recomienda descargar el dataset HAM10000 (Por cuestiones de memoria no se encuentra en el repositorio), colocar las imágenes en la carpeta Dataset y ejecutar este script
+
 ## Albumentation.py
 
 Script basado en la librería Albumentation para realizar data augmentation. Se realiza un aumento aproximado de 10000 a 25000 imágenes. Conserva los bounding boxes.
+
+Este script cuenta con un pipeline de filtros que puede ser modificado en función de las necesidades que se requieran
 
 # Dataset
 
